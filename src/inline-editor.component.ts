@@ -666,6 +666,12 @@ export class InlineEditorComponent
     }
 
     private updateConfig(config?: InlineConfig, property?: string, value?: any) {
+
+        this.state = new InlineEditorState({
+            disabled: this.config.disabled,
+            value: "",
+        });
+
         if (this.config) {
             config = config || this.config;
 
